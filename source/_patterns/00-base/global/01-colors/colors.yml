@@ -1,0 +1,59 @@
+items:
+  - name: $white
+    value: white
+  - name: $near-white
+    value: '#f2f2f2'
+  - name: $gray-lightest
+    value: '#e5e5e5'
+  - name: $gray-lighter
+    value: '#ccc'
+  - name: $gray-light
+    value: '#999'
+  - name: $gray
+    value: '#666'
+  - name: $gray-dark
+    value: '#4c4c4c'
+  - name: $gray-darker
+    value: '#333'
+  - name: $black
+    value: black
+  - name: $gray-med
+    value: '#444'
+  - name: $blue
+    value: '#037ee6'
+  - name: $sky-blue
+    value: '#f1f7fd'
+  - name: $sky-blue-border
+    value: '#c6d4e1'
+  - name: $near-black
+    value: '#212121'
+  - name: $yellow
+    value: '#faf076'
+  - name: $pink
+    value: '#f4545f'
+  - name: $light-green
+    value: '#65d18f'
+  - name: $dim
+    value: 'rgba(0, 0, 0, 0.5)'
+  - name: $error
+    value: '#f00'
+  - name: $valid
+    value: '#089e00'
+  - name: $gray
+    value: '#7c7c7c'
+  - name: $gray-med
+    value: '#606060'
+  - name: $gray-dark
+    value: '#404040'
+  - name: $gray-light
+    value: '#f9f9f9'
+  - name: $gray-light-2
+    value: '#eee'
+  - name: $light-sky-blue
+    value: '#e9f5fe'
+  - name: $dark-sky-blue
+    value: '#cee6fb'
+meta:
+  description: >-
+    To add to these items, use Sass variables that start with <code>$</code> in
+    <code>.//components/_patterns/00-base/global/01-colors/_color-vars.scss</code>

@@ -1,0 +1,175 @@
+body {
+  background: $white;
+  font-family: $crc_regular;
+  font-size: 20px;
+  font-weight: 400;
+  color: $gray;
+  line-height: 1.4;
+}
+
+* {
+  @include css3-prefix("box-sizing", "border-box");
+}
+
+p {
+  font-size: 20px;
+  color: $gray;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: 18px;
+  }
+}
+
+/** Global Link effect design
+  * - Black to blue effect
+  * - Blue to Black effect
+  *
+*/
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1170px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.adminimal-admin-toolbar {
+  .layout-container {
+    margin-top: 100px;
+
+    .header {
+      margin-top: 80px;
+
+      &.header-up {
+        margin-top: 100px;
+      }
+    }
+  }
+
+  #toolbar-administration {
+    position: relative;
+    z-index: 9999;
+  }
+}
+
+.box-shadow {
+  @include css3-prefix(box-shadow, 0 0 76px rgba(3, 126, 230, 0.05));
+}
+
+.inclined_bg {
+  position: relative;
+  padding: 70px 0 !important;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: $light-sky-blue;
+    transform: skewY(4.5deg);
+    z-index: -1;
+    content: "";
+  }
+
+  @media (max-width: 767px) {
+    margin: 30px 0 !important;
+    padding: 30px 0 !important;
+  }
+
+  @media (max-width: 480px) {
+    margin: 15px 0 !important;
+  }
+}
+
+#block-aws-local-tasks {
+  margin-top: 100px;
+  padding: 15px;
+
+  @media (max-width: 575px) {
+    margin-top: 70px;
+  }
+}
+
+.user-login-form {
+  margin-bottom: 70px;
+  padding: 15px;
+
+  .captcha {
+    &.js-form-wrapper {
+      .js-form-item {
+        &.form-item {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+.full-main {
+  @media (max-width: 767px) {
+    margin-top: 60px;
+  }
+}
+
+// admin panel link effect changes
+.toolbar-icon {
+  -webkit-text-fill-color: initial;
+}
+
+// pulse effect
+.pulse-effect:hover {
+  &:hover {
+    animation: animate-pulse-effect 3s linear infinite;
+  }
+}
+
+@keyframes animate-pulse-effect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(250, 240, 118, 0.7), 0 0 0 0 rgba(250, 240, 118, 0.7);
+  }
+
+  40% {
+    box-shadow: 0 0 0 20px rgba(250, 240, 118, 0), 0 0 0 0 rgba(250, 240, 118, 0.7);
+  }
+
+  80% {
+    box-shadow: 0 0 0 20px rgba(250, 240, 118, 0), 0 0 0 30px rgba(250, 240, 118, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(250, 240, 118, 0), 0 0 0 30px rgba(250, 240, 118, 0);
+  }
+}

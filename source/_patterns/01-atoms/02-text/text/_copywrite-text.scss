@@ -1,0 +1,36 @@
+//copywrite text in footer bottom
+.copyright-text {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: normal;
+  font-family: $crc_regular;
+  text-align: center;
+
+  p {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  .love {
+    padding-left: 3px;
+    padding-right: 3px;
+
+    &::before {
+      display: inline-block;
+      margin: auto;
+      height: 20px;
+      width: 26px;
+      padding-left: 3px;
+      padding-right: 3px;
+      background-image: $spriteImage;
+      background-position: -189px -24px;
+      vertical-align: middle;
+      background-repeat: no-repeat;
+      content: '';
+    }
+  }
+}

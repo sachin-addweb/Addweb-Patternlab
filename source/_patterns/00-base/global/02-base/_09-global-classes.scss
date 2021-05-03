@@ -1,0 +1,145 @@
+/* ------------------------------------*\
+    $GLOBAL CLASSES
+\*------------------------------------ */
+
+/* Clearfix */
+.cf {
+  *zoom: 1;
+}
+
+.cf::before,
+.cf::after {
+  content: " ";
+  display: table;
+}
+
+.cf::after {
+  clear: both;
+}
+
+/* Completely remove from the flow and screen readers. */
+.is-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+.is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Floats */
+.right {
+  text-align: right;
+}
+
+.right-search {
+  float: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Text-Align */
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+/* Display Classes */
+.hide-small {
+  @media all and (max-width: $bp-med) {
+    display: none;
+  }
+}
+
+.hide-med {
+  @media all and (min-width: $bp-med) and (max-width: $bp-large) {
+    display: none;
+  }
+}
+
+.hide-large {
+  @media all and (min-width: $bp-large) {
+    display: none;
+  }
+}
+
+/* States */
+.valid {
+  color: $valid;
+}
+
+.error {
+  color: $error;
+}
+
+.warning {
+  color: $warning;
+}
+
+.information {
+  color: $information;
+}
+
+.bottom-bg {
+  display: initial;
+  background-image: linear-gradient(transparent 0%, transparent calc(50% - 25%), $yellow calc(50% - 25%), $yellow 100%);
+  background-size: 100% 200%;
+  background-position: 0 0;
+  word-break: break-word;
+  width: auto;
+}
+
+.bottom-bg-l-white {
+  display: initial;
+  background-image: linear-gradient(transparent 0%, transparent calc(50% - 20%), $white calc(50% - 20%), $white 100%);
+  background-size: 100% 200%;
+  background-position: 0 0;
+  word-break: break-word;
+  width: auto;
+}
+
+/* Custom margins */
+
+.mt-small {
+  margin-top: 20px;
+}
+
+.mt-medium {
+  margin-top: 50px;
+}
+
+.mt-large {
+  margin-top: 80px;
+}
+
+.mb-small {
+  margin-bottom: 20px;
+}
+
+.mb-medium {
+  margin-bottom: 50px;
+}
+
+.mb-large {
+  margin-bottom: 80px;
+}

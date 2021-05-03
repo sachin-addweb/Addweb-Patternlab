@@ -1,0 +1,25 @@
+{% set section_titlewrap_blockname = 'homepage' %}
+{% set iwtlisting_base_class = 'listings' %}
+{% set iwt_content_blockname = iwt_base_class %}
+
+
+{% if section_title %}
+	<div {{ bem( 'title', (section_titlewrap_modifier), section_titlewrap_blockname)}}>
+		{% include "@atoms/02-text/00-headings/_heading.twig" with {
+              "heading_level": 2,
+              "heading": section_title,
+              "heading_base_class": 'title',
+              "heading_blockname": section_titlewrap_blockname
+            } %}
+	</div>
+
+{% endif %}
+
+
+<section {{ bem(iwtlisting_base_class, (iwtlisting_modifier), iwtlisting_blockname)}}>
+	{% for iwtlist in iwtlists %}
+		{% include "@molecules/image-with-text/image-with-text.twig" with iwtlist
+		%}
+	{% endfor %}
+
+</section>

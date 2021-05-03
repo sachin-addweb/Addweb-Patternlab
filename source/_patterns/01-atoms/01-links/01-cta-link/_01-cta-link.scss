@@ -1,0 +1,70 @@
+.cta-link-1 {
+  margin-top: 10px;
+
+  a {
+    color: $gray-med;
+    font-weight: 700;
+    font-size: 15px;
+  }
+}
+
+.next-link-icon {
+  position: relative;
+  height: 45px;
+  border: 2px solid $yellow;
+  width: 45px;
+  border-radius: 100px;
+  display: inline-block;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -65px;
+    height: 44px;
+    width: 4px;
+    background-repeat: no-repeat;
+    background-color: $yellow;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    background-image: url('../images/arrow-right.png');
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 18px;
+    width: 15px;
+    background-repeat: no-repeat;
+    background-size: 13px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.next-icon {
+  position: relative;
+  height: 45px;
+  border: 2px solid $yellow;
+  width: 45px;
+  border-radius: 100px;
+  display: inline-block;
+  text-align: center;
+  font-size: 0;
+
+  &::after {
+    background-image: url('../images/arrow-right.png');
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 18px;
+    width: 15px;
+    background-repeat: no-repeat;
+    background-size: 13px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+

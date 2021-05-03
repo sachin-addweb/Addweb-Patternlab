@@ -1,0 +1,9 @@
+{% if modifier_position %}
+  <div class="{{modifier_position}} ">
+{% endif %}
+    <a class="btn {{modifier_class}} {{modifier_popupclass}}" href={{cta_link_url}}>
+        {{cta_link_text}}
+    </a>
+{% if modifier_position %}
+  </div>
+{% endif %}

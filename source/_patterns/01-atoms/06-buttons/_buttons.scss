@@ -1,0 +1,182 @@
+@mixin button($bg:$black, $color:$white, $hoverBg: $gray, $hoverColor: $white) {
+  background-color: $bg;
+  border: none;
+  color: $color;
+  cursor: pointer;
+  line-height: 1.4;
+  padding: 0.5em 1em;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:visited {
+    color: $color;
+  }
+
+  &:hover {
+    background-color: $hoverBg;
+  }
+}
+
+@mixin button-alt {
+  @include button($gray, $white, $black);
+
+  font-weight: 600;
+  font-size: 0.7rem;
+  padding: 0.4em 0.6em 0.3em;
+}
+
+@mixin button-alt-2 {
+  @include button($gray-lightest, $black, $gray-lighter);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.button {
+  @include button;
+
+  &--alt {
+    @include button;
+    @include button-alt;
+  }
+
+  &--alt-2 {
+    @include button;
+    @include button-alt-2;
+  }
+}
+
+/* ------------------------------------*\
+    $BUTTONS
+\*------------------------------------ */
+
+.text-btn {
+  font-style: italic;
+}
+
+.btn,
+a.btn {
+  position: relative;
+  display: inline-block;
+  padding: 11px 60px;
+  border: 1px solid $blue;
+  border-radius: 50px;
+  background-color: $blue;
+  color: $white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: $crc_regular;
+  box-shadow: none;
+  vertical-align: middle;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 0;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    display: inline-block;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.9s;
+    transition: all 0.9s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background-color: $blue;
+    opacity: 0;
+    border-radius: 50px;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    content: '';
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $blue;
+
+    &::after {
+      background: $white;
+      height: 400%;
+      opacity: 1;
+      content: '';
+    }
+  }
+
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    background-color: $blue;
+  }
+
+  &.disabled {
+    background: $gray-light-2;
+    color: $gray;
+  }
+
+  &.btn-yellow {
+    background-color: $yellow;
+    border-color: $yellow;
+
+    &::after {
+      background-color: $yellow;
+    }
+
+    &:hover {
+      color: $blue !important;
+
+      &::after {
+        color: $blue;
+        height: 600%;
+      }
+    }
+  }
+
+  &.btn-plain {
+    background-color: transparent;
+    border: 2px solid $blue;
+    padding: 10px 50px 6px;
+    color: $blue;
+
+    &.btn-yellow {
+      background-color: transparent;
+      border: 2px solid $yellow;
+      color: $yellow;
+    }
+
+    @media (max-width: 767px) {
+      padding: 8px 15px 4px;
+      font-size: 14px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding: 10px 35px 6px;
+    }
+  }
+
+  &.btn-sm {
+    padding: 7px 40px;
+  }
+
+  @media (max-width: 360px) {
+    white-space: nowrap;
+  }
+
+  @media (max-width: 767px) {
+    padding: 11px 30px 8px 30px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    padding: 11px 45px;
+  }
+}

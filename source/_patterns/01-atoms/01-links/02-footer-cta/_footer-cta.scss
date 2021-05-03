@@ -1,0 +1,37 @@
+
+.cta-wrapper {
+  padding: 30px 15px;
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+
+  h2 {
+    font-size: 38px;
+    line-height: 55px;
+    color: $white;
+
+    @media (max-width: 767px) {
+      font-size: 30px;
+      line-height: 45px;
+    }
+
+    .bottom-bg {
+      z-index: 1;
+      color: $black;
+    }
+  }
+
+  .cta-btn-wrap {
+    text-align: center;
+  }
+}
+
+.footer-cta {
+  h2 {
+    margin-bottom: 115px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 90px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{% set dl_term_base_class = dl_term_base_class|default('dl-term') %}
+{% set dl_def_base_class = dl_def_base_class|default('dl-def') %}
+
+{% set accordion_item_class = accordion_item_class|default('dl-item') %}
+
+<div {{bem (accordion_item_class) }}>
+    <div {{ bem(dl_term_base_class, (dl_term_modifiers), dl_term_blockname) }}>{{ dl_term }}</div>
+    <div {{ bem(dl_def_base_class, (dl_def_modifiers), dl_def_blockname) }}>{{ dl_def }}</div>
+</div>

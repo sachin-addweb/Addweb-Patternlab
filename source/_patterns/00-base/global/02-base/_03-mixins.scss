@@ -1,0 +1,94 @@
+/////////////////////
+// General Mixins (put specific ones in component files where applicable)
+
+/// Mixin - Clearfix.
+/// Adds clearfix based on http://bourbon.io/docs/#clearfix
+/// use example =   @include cleafix
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+
+/// Use the breakout mixin for elements that should be edge-to-edge
+/// Even when a parent container uses the wrapper mixin
+@mixin breakout($v-padding: $space-double) {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding-left: calc(#{$v-padding} + calc(-50vw + 50%));
+  padding-right: calc(#{$v-padding} + calc(-50vw + 50%));
+}
+
+// Grid-Gutter
+@mixin grid-gutter( $partition, $total-space) {
+  @media (min-width: 992px) {
+    width: calc((100% / #{$partition}) - #{($total-space) * (#{$partition - 1})} / #{$partition});
+    margin-right: ($total-space);
+
+    &:nth-child(#{$partition}n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 991px) {
+    width: calc((100% / 3) - #{($total-space) * (2)} / 3);
+    margin-right: $total-space;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 575px) {
+    width: calc((100% / 2) - #{($total-space)} / 2);
+    margin-right: $total-space;
+
+    &:nth-child(3n) {
+      margin-right: $total-space;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
+    margin-right: 0;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+/// Mixin - Standard Margin
+@mixin margin {
+  margin-bottom: 1em;
+}
+
+@mixin no-bottom {
+  margin-bottom: 0;
+}
+
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+@mixin css3-sufix($property, $value) {
+  #{$property}: -webkit-#{$value};
+  #{$property}: -khtml-#{$value};
+  #{$property}: -moz-#{$value};
+  #{$property}: -ms-#{$value};
+  #{$property}: -o-#{$value};
+  #{$property}: #{$value};
+}

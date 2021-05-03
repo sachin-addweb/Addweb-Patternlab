@@ -1,0 +1,43 @@
+.full-cta {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  .full-title-cta {
+    display: inline-block;
+    vertical-align: text-top;
+  }
+
+  .cta-btn-wrap {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+
+    @media (max-width: 767px) {
+      margin-left: 20px;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .next-link-icon {
+      display: inline-block;
+      margin-bottom: -8px;
+      margin-left: 22px;
+
+      &::before {
+        display: none;
+      }
+
+      @media (max-width: 767px) {
+        margin-left: 0;
+      }
+    }
+  }
+}

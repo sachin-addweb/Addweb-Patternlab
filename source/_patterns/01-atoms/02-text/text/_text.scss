@@ -1,0 +1,82 @@
+// Create a mixin for paragraph styles that can be implemented
+// in components with other classnames.
+@mixin paragraph($margin: 0 0 1em) {
+  margin: #{$margin};
+}
+
+// @mixin body-copy {
+//   font-family: $font-body ;
+//   font-size: 0.9rem;
+//   line-height: 1.6em;
+// }
+
+// body {
+//   color: $gray;
+
+//   @include body-copy;
+// }
+
+.blockquote {
+  position: relative;
+  margin-left: 22px;
+  margin-top: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 22px;
+  border-left: solid 3px $blue;
+  font-style: italic;
+
+  @include css3-prefix('box-shadow' ,(0 0 76px rgba(3,126,230,0.2)));
+
+  &::before {
+    position: absolute;
+    top: -20px;
+    right: auto;
+    bottom: auto;
+    left: -5px;
+    height: 22px;
+    width: 22px;
+    background-image: url('./../images/blockquote.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: currentColor;
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+
+.text-long {
+  blockquote {
+    @extend .blockquote;
+  }
+
+  hr {
+    @extend .hr;
+  }
+}
+
+pre {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 10px;
+  border: 1px solid $color-border;
+  background-color: #efefef;
+  padding: 5px;
+  overflow-x: hidden;
+
+  @extend .box-shadow;
+}
+
+.code {
+  margin: 0 0 10px;
+}

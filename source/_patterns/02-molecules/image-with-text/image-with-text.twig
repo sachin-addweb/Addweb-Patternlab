@@ -1,0 +1,68 @@
+{% set iwt_base_class = 'iwt' %}
+{% set iwt_content_blockname = iwt_base_class %}
+
+{% set iwt_content_base_class = 'content' %}
+
+{% set iwt_img_base_class = 'image-wrap' %}
+{% set iwt_img_blockname = iwt_base_class %}
+
+{% set iwt_textcontent_base_class = 'textcontent' %}
+{% set iwt_textcontent_blockname = iwt_base_class %}
+
+{% set iwt_titlewrap_base_class = 'titlewrap' %}
+{% set iwt_titlewrap_blockname = iwt_base_class %}
+
+<section {{ bem(iwt_base_class, (iwt_modifier), iwt_blockname)}}>
+
+	<div {{ bem(iwt_content_base_class, (iwt_content_modifier), iwt_content_blockname)}}>
+
+		<div {{ bem(iwt_img_base_class, (iwt_img_modifier), iwt_img_blockname)}}>
+
+			{% if iwt_image_src %}
+				{% include "@atoms/04-images/image.twig" with {
+				"img_src": iwt_image_src,
+				"img_alt": iwt_img_alt,
+				"image_blockname": iwt_base_class
+			} %}
+			{% else %}
+
+				{% if videos %}
+					{% include "@atoms/10-iframe/iframe.twig" with videos %}
+				{% endif %}
+
+			{% endif %}
+
+		</div>
+
+		<div {{ bem(iwt_textcontent_base_class, (iwt_textcontent_modifier), iwt_textcontent_blockname, (iwt_bgmodifier))}}>
+
+			{% if iwt_title %}
+				<div {{ bem(iwt_titlewrap_base_class, (iwt_titlewrap_modifier), iwt_titlewrap_blockname)}}>
+					{% include "@atoms/02-text/00-headings/_heading.twig" with {
+              "heading_level": 2,
+              "heading": iwt_title,
+              "heading_base_class": 'title',
+              "heading_blockname": iwt_base_class
+            } %}
+				</div>
+
+			{% endif %}
+
+			{% if iwt_paragraph %}
+				{% include "@atoms/02-text/text/01-paragraph.twig" with {
+          "paragraph_content": iwt_paragraph,
+          "paragraph_base_class": 'description',
+          "paragraph_blockname": iwt_base_class,
+        } %}
+				{% if iwt_link_url %}
+					{% include "@atoms/01-links/link/link.twig" with {
+            "link_content": iwt_link_text,
+            "link_url": iwt_link_url,
+            "link_blockname": iwt_base_class,
+            "link_base_class": 'link'
+          } %}
+				{% endif %}
+			{% endif %}
+		</div>
+	</div>
+</section>

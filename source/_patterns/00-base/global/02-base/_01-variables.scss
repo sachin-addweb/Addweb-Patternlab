@@ -1,0 +1,75 @@
+//////////////////////////
+// General Variables
+// Note: colors should go into
+// components/_patterns/00-base/global/01-colors/_color-vars.scss
+// and breakpoint related vars into
+// components/_patterns/00-base/_breakpoints.scss
+
+// // Font Name
+$primary-font: "ProspectusXL-SemiBold";
+
+$crc_regular: "Circe Regular";
+$crc_bold: "Circe Bold";
+$crc_light: "Circe Light";
+
+// Font URL
+$primary_font_url: url("../fonts/prospectus/ProspectusS-SemiBold.otf");
+
+$circe_regular_url: url("../fonts/circe/crc-regular.otf");
+$circe_bold_url: url("../fonts/circe/circe-bold.otf") format("otf");
+$circe_light_url: url("../fonts/circe/circe-light.otf") format("otf");
+
+// Fonts
+$font-body: $crc_regular;
+$font-heading: $crc_regular;
+
+// Spacing
+$space: 1rem;
+
+// times
+$space-double: $space * 2;
+$space-triple: $space * 3;
+$space-quadruple: $space * 4;
+$space-quintuple: $space * 5;
+$space-sextuple: $space * 6;
+$space-septuple: $space * 7;
+
+// divided
+$space-one-half: $space/2;
+$space-one-third: $space/3;
+$space-one-fourth: $space/4;
+$space-one-fifth: $space/5;
+$space-one-sixth: $space/6;
+$space-one-seventh: $space/7;
+$space-one-eighth: $space/8;
+
+//Defaults
+$space: 13px;
+$space-and-half: $space * 1.5;
+$space-double: $space * 2;
+$space-quad: $space * 4;
+$space-half: $space/2;
+$pad: 1em;
+$pad-and-half: $pad * 1.5;
+$pad-double: $pad * 2;
+$pad-half: $pad/2;
+$pad-quarter: $pad/4;
+
+//Borders
+$border-med: 3px;
+$border-thick: 7px;
+
+//Breakpoints
+$bp-small: 24em;
+$bp-small-2: 29.75em;
+$bp-small-3: 39.8em;
+$bp-med: 46.8em;
+$bp-med-2: 48em;
+$bp-large: 50em;
+$bp-large-2: 66em;
+$bp-xl: 73em;
+$bp-xxl: 89em;
+$bp-xxxl: 93em;
+
+//image variable
+$spriteImage: url("../images/sprite-icons.png");

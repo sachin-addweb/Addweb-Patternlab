@@ -1,0 +1,19 @@
+{
+    "iwt_modifier": {
+        "1": "right-img"
+    },
+    "iwt_title": "lorem ipsum ipsum",
+    "iwt_image_src": "../../images/9006.jpg",
+    "iwt_image_alt": "image1",
+    "iwt_bgmodifier": {
+        "1": "bg-blue"
+    },
+    "iwt_paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+    "iwt_link_text": "Read-more",
+    "iwt_link_url": "#",
+    "videos": {
+        "height": "300px",
+        "width": "100%",
+        "iframe_src": "https://www.youtube.com/embed/wEZo0i31g5c"
+    }
+}

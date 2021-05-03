@@ -1,0 +1,229 @@
+//
+// Generic header styles:
+// All arguments are optional. If not defined, the defaults below will be used
+//
+
+$color-heading: $gray-darker;
+
+@mixin heading-xl($font-family: $font-heading, $font-size: 2rem, $line-height: 1.4, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 700, $margin: 0 0 0.5em) {
+  color: #{$color};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  font-size: #{$font-size};
+  line-height: #{$line-height};
+  margin: #{$margin};
+  width: auto;
+
+  &__link {
+    color: $color-link;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}
+
+@mixin heading-large($font-family: $font-heading, $font-size: 1.8rem, $line-height: 1.4, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 700, $margin: 0 0 0.5em) {
+  color: #{$color};
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  font-size: #{$font-size};
+  line-height: #{$line-height};
+  margin: #{$margin};
+  width: auto;
+
+  &__link {
+    color: $color-link;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}
+
+@mixin heading-medium($font-family: $font-heading, $font-size: 1.4rem, $line-height: 1.6, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 700, $margin: 0 0 0.5em) {
+  color: #{$color};
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  font-size: #{$font-size};
+  line-height: #{$line-height};
+  margin: #{$margin};
+  width: auto;
+
+  &__link {
+    color: $color-link;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}
+
+@mixin heading-small($font-family: $font-heading, $font-size: 1.2rem, $line-height: 1.6, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 600, $margin: 0 0 0.5em) {
+  color: #{$color};
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  font-size: #{$font-size};
+  line-height: #{$line-height};
+  margin: #{$margin};
+  width: auto;
+
+  &__link {
+    color: $color-link;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}
+
+@mixin heading-xs($font-family: $font-heading, $font-size: 1.1rem, $line-height: 2, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 600, $margin: 0 0 0.5em) {
+  color: #{$color};
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  font-size: #{$font-size};
+  line-height: #{$line-height};
+  margin: #{$margin};
+  width: auto;
+
+  &__link {
+    color: $color-link;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+  font-weight: 500;
+  font-family: $primary-font;
+}
+
+h1,
+.alpha {
+  font-size: 50px;
+  line-height: 1.2;
+  color: $black;
+}
+
+h2,
+.h2,
+.beta {
+  color: $black;
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 0;
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+    // line-height: 33px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: 32px;
+    // line-height: 49px;
+  }
+}
+
+h3,
+.gamma {
+  font-size: 32px;
+}
+
+h4,
+.delta {
+  font-size: 28px;
+}
+
+h5,
+.epsilon {
+  font-size: 24px;
+}
+
+h6,
+.zeta {
+  font-size: 20px;
+}
+
+.h1 {
+  @include heading-xl();
+}
+
+.h2 {
+  @include heading-large();
+}
+
+.h3 {
+  @include heading-medium();
+}
+
+.h4 {
+  @include heading-small();
+}
+
+.h5,
+.h6 {
+  @include heading-xs();
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+
+.text-long {
+  h1 {
+    @extend .h1;
+  }
+
+  h2 {
+    @extend .h2;
+  }
+
+  h3 {
+    @extend .h3;
+  }
+
+  h4 {
+    @extend .h4;
+  }
+
+  h5 {
+    @extend .h5;
+  }
+
+  h6 {
+    @extend .h6;
+  }
+}
+
+.title-banner {
+  position: relative;
+  font-size: 60px;
+  color: $white;
+  line-height: normal;
+
+  @media (max-width: 991px) {
+    font-size: 38px;
+  }
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  span {
+    color: $black;
+  }
+}
+
+

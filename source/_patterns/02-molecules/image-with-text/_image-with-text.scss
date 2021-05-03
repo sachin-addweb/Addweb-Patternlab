@@ -1,0 +1,137 @@
+.iwt {
+  // @extend .box-shadow;
+
+  .iwt__content {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .iwt__image-wrap,
+    .iwt__textcontent {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      align-items: center;
+      padding: 30px 50px;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        padding: 25px;
+      }
+    }
+  }
+
+  .iwt__image-wrap {
+    justify-content: center;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      border: 25px solid $blue;
+      margin-top: 10px;
+      border-bottom: none;
+    }
+  }
+
+  .iwt__textcontent {
+    position: relative;
+    background-color: $blue;
+    color: $white;
+    justify-content: flex-start;
+    text-align: left;
+
+    &::before {
+      position: absolute;
+      top: 80px;
+      left: -33px;
+      bottom: auto;
+      height: 16px;
+      width: 67px;
+      background-color: $yellow;
+      content: "";
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 991px) {
+      width: 50%;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    .iwt__titlewrap {
+      display: inline-block;
+      margin-bottom: 10px;
+
+      .iwt__title {
+        display: initial;
+        width: 100%;
+        font-size: 32px;
+        color: $yellow;
+
+        @media (max-width: 767px) {
+          font-size: 24px;
+        }
+      }
+    }
+
+    p {
+      width: 100%;
+      margin-bottom: 10px;
+      color: $white;
+    }
+
+    .iwt__link {
+      display: inline-block;
+      color: $white;
+      text-decoration: none;
+
+      @media (max-width: 767px) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &.bg-white {
+      background-color: $white !important;
+
+      .iwt__title {
+        color: $black;
+      }
+
+      .iwt__description,
+      p {
+        color: $gray;
+      }
+
+      .iwt__link {
+        color: $gray;
+      }
+    }
+  }
+}
+
+.iwt--right-img {
+  @media (min-width: 768px) {
+    .iwt__content {
+      @include css3-prefix(flex-direction, row-reverse);
+
+      .iwt__textcontent {
+        text-align: right;
+        justify-content: flex-end;
+
+        &::before {
+          right: -33px;
+          left: auto;
+        }
+      }
+    }
+  }
+}
