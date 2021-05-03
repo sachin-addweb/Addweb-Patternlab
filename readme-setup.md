@@ -7,6 +7,7 @@ use below steps - Reference
 - need to remove package-lock.json 
 - npm install
 -- composer install
+composer require
 - npm install gulp
 
 
