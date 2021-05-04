@@ -18,6 +18,7 @@
   "homepage": "https://github.com/drupalastic/patternlab-php-twig-gulp#readme",
   "dependencies": {
     "@babel/core": "^7.1.6",
+    "bootstrap": "^5.0.0-beta3",
     "composer": "^4.1.0",
     "fstream": ">=1.0.12",
     "gulp-babel": "^8.0.0",
